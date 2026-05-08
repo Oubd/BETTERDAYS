@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Gym Tracker</title>
+    <meta name="description" content="A simple and fast gym workout tracker app">
+    
+    <!-- PWA Meta Tags -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0d1117">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Gym Tracker">
+    <link rel="apple-touch-icon" href="icon-192.png">
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container container">
+        <header>
+            <h1>Gym Tracker</h1>
+            <p>Log your daily exercises</p>
+        </header>
+
+        <main>
+            <!-- Stats Section -->
+            <section class="stats-section">
+                <div class="stat">
+                    <span class="stat-value" id="total-sets">0</span>
+                    <span class="stat-label">Total Sets</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value" id="total-reps">0</span>
+                    <span class="stat-label">Total Reps</span>
+                </div>
+            </section>
+
+            <form id="workout-form">
+                <div class="input-group">
+                    <label for="exerciseSelect">Exercise Name</label>
+                    <select id="exerciseSelect"></select>
+                    <input type="text" id="exerciseEdit" placeholder="Edit exercise name" required>
+                </div>
+                
+                <div class="row">
+                    <div class="input-group">
+                        <label for="sets">Sets</label>
+                        <input type="number" id="sets" placeholder="0" min="1" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="reps">Reps</label>
+                        <input type="number" id="reps" placeholder="0" min="1" required>
+                    </div>
+                </div>
+
+                <button type="submit" id="add-btn">Add Exercise</button>
+            </form>
+
+            <section class="workout-list-section">
+                <div class="list-header">
+                    <h2>Today's Workout</h2>
+                    <button id="clear-all-btn" class="text-btn">Clear All</button>
+                </div>
+                <ul id="workout-list">
+                    <!-- Workout items will go here -->
+                </ul>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
