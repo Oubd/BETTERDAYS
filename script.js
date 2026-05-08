@@ -105,8 +105,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function updateStats() {
-        let totalSets = 2;
-        let totalReps = 10;
+        let totalSets = 0;
+        let totalReps = 0;
 
         workouts.forEach(workout => {
             const sets = parseInt(workout.sets, 10) || 0;
